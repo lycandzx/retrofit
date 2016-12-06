@@ -1,0 +1,69 @@
+网络请求Retrofit：
+1. http 基本知识
+    1. 消息的结构：请求和响应的消息结构
+    2. 响应码
+    3. 重定向
+2. OkHttp
+3. Retrofit
+
+总结：
+1. 最热门的布局：ViewPager+TabLayout+Fragment
+2. Http:
+    1. 消息的结构：请求和响应的消息结构
+    2. 响应码
+    3. 重定向
+3. Okhttp初步认识：基本使用流程清楚
+    OkhttpClient 核心类
+    Request：Builder().build();
+    异步回调：后台线程
+目标：回顾内容
+预习:OkHttp：Call模型
+     Retrofit：
+
+20161205
+1. OkHttp的使用：
+    Call模型
+总结：
+Okhttp的使用
+1. Call模型：请求和响应做了一个统一的管理
+2. 拦截器：1. 依赖 2. 设置级别BODY 3. 给OKHttpClient设置上
+3. GET请求：
+    1. 将OkHttpClient进行单例
+    2. 创建一个接口，对请求做管理
+    3. 单例的类里面做请求的具体实现
+4. POST请求：
+    POST请求要传入请求体：RequestBody
+    1. 实体类：Json,GsonFormat插件帮助自动生成
+    2. Gson ：将实体类转换成Json字符串，大家可以试着将响应信息解析一下
+目标：
+    Call，拦截器，一定要掌握
+    GET、POST要掌握
+    可以试着封装一个CallBack：可以进行UI的更新
+    预习：Retrofit
+
+20161206
+Retrofit :
+1. Retrofit是基于OkHttp进行封装的，使用流程类似
+   1. retrofit 是利用注解！！！！来进行请求的构建
+   2. Call模型也是有的，功能更加完善了一些
+   3. 新增了很多功能:转换器
+   4. 关于Call的后台线程的问题，Retrofit处理了
+2. 使用：
+    1. 添加依赖：compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    2. Retrofit进行初始化，单例，设置OkHttpClient，实现请求接口
+    3. 构建请求
+    4. 执行请求
+3. 为什么使用Retrofit
+   Call模型结合转换器：自动解析
+
+   关于转换器Gson：实现Json和实体类或集合之间的转换
+   1. 添加依赖：compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+   2. 设置给Retrofit
+总结：1. Retrofit的注解！！！！！
+      2. 转换器---Call模型里面的泛型（实际请求成功的类型）
+      3. 使用流程
+
+目标：Retrofit使用多多练习！！！！
+      POST请求的实现
+      转换器的实现
+
